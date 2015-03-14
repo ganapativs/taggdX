@@ -121,30 +121,27 @@
             });
         }
 
-        $(window).on('resize', function (e) {
+        var clearId;
+        $(window).resize( function (e) {
+            clearTimeout(clearId);
+            clearId=setTimeout(function(){
+                //console.log(_this.wrapper.width());
             if ($(e.target).hasClass('ui-resizable')) {//Check whether the target has class "ui-resizable".
                 return false;
             }
             else
                 {
-                    if(_this.initialized) {
-                        console.log(1);
-                        _this.addDOM();
-                        //_this.element.triggerHandler('change');
-                    }
-                    _this.updateDOM();
-                }
-        });
 
-        //$(window).resize(function() {
-        //
-        //
-        //    if(_this.initialized) {
-        //        _this.addDOM();
-        //        _this.element.triggerHandler('change');
-        //    }
-        //    //_this.updateDOM();
-        //});
+                        if(_this.initialized) {
+                            //console.log(1);
+                            _this.addDOM();
+                            //_this.element.triggerHandler('change');
+                        }
+                        //_this.updateDOM();
+                }
+
+            },100);
+        });
     };
 
     Taggd.prototype.initWrapper = function() {
@@ -339,11 +336,9 @@
         var _this = this;
 
         this.clear();
-        //console.log(this.element.width());
 
         var original_h = this.element.height();
         var original_w = this.element.width();
-        //console.log(original_h+' '+original_w);
 
         this.element.css({ height: 'auto', width: 'auto' });
 
@@ -397,7 +392,7 @@
                 _this.element.removeAttr('style');
                 var height = original_h;
                 var width = original_w;
-                console.log(height+' '+width);
+                //console.log(height+' '+width);
                 var dataI = _this.options.array.length;
                 var offset = $(this).offset();
                 var position = {
@@ -508,8 +503,8 @@
                     "width": v.x1*width-v.x*width,
                     "height": v.y1*height-v.y*height
                 });
-                console.log(position.top+' '+position.left+' '+(v.x1*width-v.x*width)+' '+( v.y1*height-v.y*height));
-                console.log(1);
+                //console.log(position.top+' '+position.left+' '+(v.x1*width-v.x*width)+' '+( v.y1*height-v.y*height));
+                //console.log(1);
                 _this.wrapper.append(append);
                 _this.element.css({ height: 'auto', width: 'auto' });
             }

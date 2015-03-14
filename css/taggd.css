@@ -60,6 +60,7 @@
     font-weight: lighter;
 	opacity: 0;
 	overflow: hidden;
+	visibility: hidden;
 	padding: 0 10px;
 	z-index: 999;
 
@@ -81,6 +82,7 @@
 
 .taggd-wrapper .taggd-item-hover.show {
 	color: #fff;
+	visibility: visible;
 	opacity: 1;
 	padding: 10px;
 	z-index: 1000;
