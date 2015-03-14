@@ -34,7 +34,7 @@
 }
 
 .taggd-wrapper .taggd-item {
-    background-color: rgba(219, 50, 92, 0.75);
+    background-color: #f26c4f;
 	cursor: pointer;
 	display: block;
 	padding: 10px;
@@ -50,10 +50,10 @@
 }
 
 .taggd-wrapper .taggd-item.active,
-.taggd-wrapper .taggd-item:hover { background-color: rgba(219, 50, 92, 0.75); }
+.taggd-wrapper .taggd-item:hover { background-color: #db3c5d; }
 
 .taggd-wrapper .taggd-item-hover {
-    background-color: rgb(219, 50, 92);
+    background-color: #452b72;
 	color: transparent;
 	cursor: default;
 	display: block;
@@ -102,7 +102,7 @@
 .taggd-wrapper .taggd-item-hover button {
 	background-color: #fff;
 	border: 0;
-	color: rgb(219, 50, 92);
+	color: #452b72;
 	font-family: 'taggd', sans-serif;
 	font-size: 0.666em;
 	height: 1.5em;
@@ -123,4 +123,39 @@
 
 .taggd-wrapper .taggd-editor {
 	position: absolute;
+}
+
+img,.taggd-wrapper {
+	display: inline-block;
+	width: 100% !important;
+}
+.image_tag{
+	min-width: 50px;
+	min-height: 50px;
+	border: 2px solid #fff;
+	border-radius: 4px;
+	-webkit-transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
+	-moz-transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
+	-o-transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
+	-ms-transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
+	transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
+}
+.image_tag:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	-webkit-filter: blur(1px);
+	-moz-filter: blur(1px);
+	-ms-filter: blur(1px);
+	-o-filter: blur(1px);
+	filter: blur(1px);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0px 0px 10px 0px #ccc;
+	border-radius: 4px;
+}
+.image_tag:hover{
+	border-width: 3px;
 }
