@@ -30,6 +30,8 @@
             top: 0
         },
 
+        enabled:true,
+
         strings: {
             save: '&#x2713;',
             delete: '&#x00D7;'
@@ -105,8 +107,11 @@
         this.initWrapper();
         this.addDOM();
 
-        if(this.options.edit) {
+        //if(this.options.edit) {
             this.element.on('click', function(e) {
+                //console.log(1);
+                if(!_this.options.enabled)
+                    return false;
                 var poffset = $(this).parent().offset(),
                     x = (e.pageX - poffset.left) / _this.element.width(),
                     y = (e.pageY - poffset.top) / _this.element.height();
@@ -121,7 +126,7 @@
 
                  _this.show(_this.data.length - 1);
             });
-        }
+        //}
 
         var clearId;
         $(window).resize( function (e) {
@@ -157,7 +162,6 @@
             _this.addDOM();
             _this.element.triggerHandler('change');
         });
-        //return new Taggd(this, options, data);
 
         _this.wrapper.append($editSwitch);
 
@@ -402,9 +406,6 @@
 
             if($(".image_tag[data-no*='"+i+"']").length==0){
                 _this.element.removeAttr('style');
-                var height = original_h;
-                var width = original_w;
-                //console.log(height+' '+width);
                 var dataI = _this.options.array.length;
                 var offset = $(this).offset();
                 var position = {
@@ -412,19 +413,14 @@
                     top: v.y*original_h
                 };
 
-                //console.log(v.x+' '+ v.y+' '+ v.x1+' '+ v.y1);
-                //console.log(width+' '+height);
-                //console.log((v.x1*width-v.x*width)+' '+(v.y1*height-v.y*height));
-                //console.log(1);
-
                 _this.options.array.push({
                     size: {
-                        width: v.x1*width-v.x*width,
-                        height: v.y1*height-v.y*height
+                        width: v.x1*original_w-v.x*original_w,
+                        height: v.y1*original_h-v.y*original_h
                     },
                     position: {
-                        left: v.x*width,
-                        top: v.y*height
+                        left: v.x*original_w,
+                        top: v.y*original_h
                     }
                 });
                 //console.log(position.top+' '+position.left+' '+(v.x1*width-v.x*width)+' '+( v.y1*height-v.y*height));
@@ -456,12 +452,12 @@
                             .attr('data-y1',v.y1);
                         _this.options.array[$(this).attr("data-no")] = {
                             size: {
-                                width: v.x1*width-v.x*width,
-                                height: v.y1*height-v.y*height
+                                width: v.x1*original_w-v.x*original_w,
+                                height: v.y1*original_h-v.y*original_h
                             },
                             position: {
-                                left: v.x*width,
-                                top: v.y*height
+                                left: v.x*original_w,
+                                top: v.y*original_h
                             }
                         };
                         _this.element.triggerHandler('change');
@@ -469,6 +465,10 @@
                     }
                 }).resizable({
                     containment: "parent",
+                    //start: function(e, ui) {
+                    //    if(!_this.options.enabled)
+                    //    return false;
+                    //},
                     stop: function (event, ui) {
                         var size = {
                             width: ui.size.width,
@@ -495,12 +495,12 @@
                             .attr('data-y1',v.y1);
                         _this.options.array[$(this).attr("data-no")] = {
                             size: {
-                                width: v.x1*width-v.x*width,
-                                height: v.y1*height-v.y*height
+                                width: v.x1*original_w-v.x*original_w,
+                                height: v.y1*original_h-v.y*original_h
                             },
                             position: {
-                                left: v.x*width,
-                                top: v.y*height
+                                left: v.x*original_w,
+                                top: v.y*original_h
                             }
                         };
                         setTimeout(function(){
@@ -512,11 +512,9 @@
                     "position": "absolute",
                     "top": position.top,
                     "left": position.left,
-                    "width": v.x1*width-v.x*width,
-                    "height": v.y1*height-v.y*height
+                    "width": v.x1*original_w-v.x*original_w,
+                    "height": v.y1*original_h-v.y*original_h
                 });
-                //console.log(position.top+' '+position.left+' '+(v.x1*width-v.x*width)+' '+( v.y1*height-v.y*height));
-                //console.log(1);
                 _this.wrapper.append(append);
                 _this.element.css({ height: 'auto', width: 'auto' });
             }
