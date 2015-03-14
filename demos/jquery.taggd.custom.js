@@ -99,6 +99,8 @@
         var _this = this;
 
         this.initialized = true;
+        if(_this.options.enabled)
+            _this.options.edit=true; // Keep edit mode on always
 
         this.initWrapper();
         this.addDOM();
@@ -125,7 +127,6 @@
         $(window).resize( function (e) {
             clearTimeout(clearId);
             clearId=setTimeout(function(){
-                //console.log(_this.wrapper.width());
             if ($(e.target).hasClass('ui-resizable')) {//Check whether the target has class "ui-resizable".
                 return false;
             }
@@ -133,11 +134,9 @@
                 {
 
                         if(_this.initialized) {
-                            //console.log(1);
                             _this.addDOM();
-                            //_this.element.triggerHandler('change');
+                            _this.element.triggerHandler('change');
                         }
-                        //_this.updateDOM();
                 }
 
             },100);
@@ -149,6 +148,19 @@
         this.element.wrap(wrapper);
 
         this.wrapper = this.element.parent('.taggd-wrapper');
+
+        var _this=this;
+        var $editSwitch=$('<button />').addClass('taggdX-edit').html('Toggle Edit Mode');
+        $editSwitch.on('click', function() {
+            _this.options.edit=!_this.options.edit;
+            _this.options.enabled=!_this.options.enabled;
+            _this.addDOM();
+            _this.element.triggerHandler('change');
+        });
+        //return new Taggd(this, options, data);
+
+        _this.wrapper.append($editSwitch);
+
     };
 
     Taggd.prototype.alterDOM = function() {
@@ -529,6 +541,9 @@
 
         this.element.removeAttr('style');
 
+        //if(this.options.edit) {
+        //    this.alterDOM();
+        //}
         if(this.options.edit) {
             this.alterDOM();
         }
@@ -576,6 +591,13 @@
                 });
             }
         });
+        if(_this.options.enabled){
+            $('.image_tag').draggable("enable").resizable("enable");
+        }
+        else{
+            $('.image_tag').draggable({ disabled: true }).resizable('disable');
+        }
+
 
         //this.wrapper.find('span.taggd-item').each(function(i, e) {
         //    var $el=$(e);
