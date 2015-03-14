@@ -121,9 +121,30 @@
             });
         }
 
-        $(window).resize(function() {
-            _this.updateDOM();
+        $(window).on('resize', function (e) {
+            if ($(e.target).hasClass('ui-resizable')) {//Check whether the target has class "ui-resizable".
+                return false;
+            }
+            else
+                {
+                    if(_this.initialized) {
+                        console.log(1);
+                        _this.addDOM();
+                        //_this.element.triggerHandler('change');
+                    }
+                    _this.updateDOM();
+                }
         });
+
+        //$(window).resize(function() {
+        //
+        //
+        //    if(_this.initialized) {
+        //        _this.addDOM();
+        //        _this.element.triggerHandler('change');
+        //    }
+        //    //_this.updateDOM();
+        //});
     };
 
     Taggd.prototype.initWrapper = function() {
@@ -318,6 +339,12 @@
         var _this = this;
 
         this.clear();
+        //console.log(this.element.width());
+
+        var original_h = this.element.height();
+        var original_w = this.element.width();
+        //console.log(original_h+' '+original_w);
+
         this.element.css({ height: 'auto', width: 'auto' });
 
         var height = this.element.height();
@@ -367,16 +394,21 @@
             }
 
             if($(".image_tag[data-no*='"+i+"']").length==0){
+                _this.element.removeAttr('style');
+                var height = original_h;
+                var width = original_w;
+                console.log(height+' '+width);
                 var dataI = _this.options.array.length;
                 var offset = $(this).offset();
                 var position = {
-                    left: v.x*_this.element.width(),
-                    top: v.y*_this.element.height()
+                    left: v.x*original_w,
+                    top: v.y*original_h
                 };
 
                 //console.log(v.x+' '+ v.y+' '+ v.x1+' '+ v.y1);
                 //console.log(width+' '+height);
                 //console.log((v.x1*width-v.x*width)+' '+(v.y1*height-v.y*height));
+                //console.log(1);
 
                 _this.options.array.push({
                     size: {
@@ -388,6 +420,7 @@
                         top: v.y*height
                     }
                 });
+                //console.log(position.top+' '+position.left+' '+(v.x1*width-v.x*width)+' '+( v.y1*height-v.y*height));
                 var append = $('<div class="image_tag" data-no="' + dataI + '"></div>').draggable({
                     containment: "parent",
                     stop: function (event, ui) {
@@ -403,7 +436,7 @@
                         v.y= ui.position.top/_this.element.height();
                         v.x1=  (ui.position.left+ $(this).width())/_this.element.width();
                         v.y1=  (ui.position.top+$(this).height())/_this.element.height();
-                        console.log('X: '+ v.x+' '+'Y: '+ v.y+' '+'WIDTH: '+ (v.x1-v.x)+' '+'HEIGHT: '+ (v.y1-v.x));
+                        //console.log('X: '+ v.x+' '+'Y: '+ v.y+' '+'WIDTH: '+ (v.x1-v.x)+' '+'HEIGHT: '+ (v.y1-v.x));
                         $("span.taggd-item[d_count*='"+dataI+"']")
                             .attr('data-x',v.x)
                             .attr('data-y',v.y)
@@ -475,11 +508,10 @@
                     "width": v.x1*width-v.x*width,
                     "height": v.y1*height-v.y*height
                 });
-                // .dblclick(function () {
-                //    $(this).remove();
-                //    _this.options.array[$(this).attr("data-no")] = "";
-                //});
+                console.log(position.top+' '+position.left+' '+(v.x1*width-v.x*width)+' '+( v.y1*height-v.y*height));
+                console.log(1);
                 _this.wrapper.append(append);
+                _this.element.css({ height: 'auto', width: 'auto' });
             }
 
             if(typeof _this.options.handlers === 'object') {
@@ -550,31 +582,31 @@
             }
         });
 
-        this.wrapper.find('span.taggd-item').each(function(i, e) {
-            var $el=$(e);
-            var no = $el.attr('d_count');
-            var left = $el.attr('data-x') * _this.element.width();
-            var top = $el.attr('data-y') * _this.element.height();
-            var width = $el.attr('data-x1') * _this.element.width()-left;
-            var height = $el.attr('data-y1') * _this.element.height()-top;
-            //_this.options.array[$el.attr("data-no")] = {
-            //    size: {
-            //        width: width,
-            //        height: height
-            //    },
-            //    position: {
-            //        left: left,
-            //        top: top
-            //    }
-            //};
-            $(".image_tag[data-no*='"+no+"']").css({
-                //"position": "absolute",
-                "top": top,
-                "left": left,
-                "width": width,
-                "height": height
-            });
-        });
+        //this.wrapper.find('span.taggd-item').each(function(i, e) {
+        //    var $el=$(e);
+        //    var no = $el.attr('d_count');
+        //    var left = $el.attr('data-x') * _this.element.width();
+        //    var top = $el.attr('data-y') * _this.element.height();
+        //    var width = $el.attr('data-x1') * _this.element.width()-left;
+        //    var height = $el.attr('data-y1') * _this.element.height()-top;
+        //    //_this.options.array[$el.attr("data-no")] = {
+        //    //    size: {
+        //    //        width: width,
+        //    //        height: height
+        //    //    },
+        //    //    position: {
+        //    //        left: left,
+        //    //        top: top
+        //    //    }
+        //    //};
+        //    //$(".image_tag[data-no*='"+no+"']").css({
+        //    //    //"position": "absolute",
+        //    //    "top": top,
+        //    //    "left": left,
+        //    //    "width": width,
+        //    //    "height": height
+        //    //});
+        //});
 
     };
 

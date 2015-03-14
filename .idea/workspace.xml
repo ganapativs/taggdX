@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd31983d-88b2-4e20-8753-1cd885716273" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/editor.html" afterPath="$PROJECT_DIR$/demos/editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/jquery.taggd.custom.js" afterPath="$PROJECT_DIR$/demos/jquery.taggd.custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,8 +31,8 @@
       <file leaf-file-name="editor.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="102" max-vertical-offset="1989">
-              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="46" />
+            <state vertical-scroll-proportion="-26.153847" vertical-offset="1173" max-vertical-offset="2091">
+              <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="113" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -40,11 +41,11 @@
       <file leaf-file-name="jquery.taggd.custom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/jquery.taggd.custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31772575" vertical-offset="6600" max-vertical-offset="10098">
-              <caret line="405" column="116" selection-start-line="405" selection-start-column="116" selection-end-line="405" selection-end-column="116" />
+            <state vertical-scroll-proportion="0.5954923" vertical-offset="8185" max-vertical-offset="10642">
+              <caret line="511" column="31" selection-start-line="511" selection-start-column="31" selection-end-line="511" selection-end-column="31" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1426321367887" expanded="true" signature="9601:9620" placeholder="..." />
+                <marker date="1426327875771" expanded="true" signature="10484:10503" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -203,7 +204,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426319411450</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial responsive but resize not working">
+      <created>1426321396448</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1426321396448</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -248,7 +255,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Started with responsive box" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started with responsive box" />
+    <MESSAGE value="Initial responsive but resize not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial responsive but resize not working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -269,7 +277,7 @@
           <caret line="383" column="39" selection-start-line="383" selection-start-column="39" selection-end-line="383" selection-end-column="39" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1426321367887" expanded="true" signature="9601:9620" placeholder="..." />
+            <marker date="1426327875771" expanded="true" signature="10484:10503" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -298,7 +306,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1426321367887" expanded="true" signature="9601:9620" placeholder="..." />
+            <marker date="1426327875771" expanded="true" signature="10484:10503" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -332,19 +340,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/editor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="102" max-vertical-offset="1989">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="46" />
+        <state vertical-scroll-proportion="-26.153847" vertical-offset="1173" max-vertical-offset="2091">
+          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="113" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/jquery.taggd.custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31772575" vertical-offset="6600" max-vertical-offset="10098">
-          <caret line="405" column="116" selection-start-line="405" selection-start-column="116" selection-end-line="405" selection-end-column="116" />
+        <state vertical-scroll-proportion="0.5954923" vertical-offset="8185" max-vertical-offset="10642">
+          <caret line="511" column="31" selection-start-line="511" selection-start-column="31" selection-end-line="511" selection-end-column="31" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1426321367887" expanded="true" signature="9601:9620" placeholder="..." />
+            <marker date="1426327875771" expanded="true" signature="10484:10503" placeholder="..." />
           </folding>
         </state>
       </provider>

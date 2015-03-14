@@ -106,6 +106,12 @@
 			});
 		});
 	});
+
+	$(window).on('resize', function (e) {
+		if ($(e.target).hasClass('ui-resizable')) {//Check whether the target has class "ui-resizable".
+			return false;
+		}
+	});
 </script>
 
 </body>
