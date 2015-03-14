@@ -342,6 +342,8 @@
             $item.attr({
                 'data-x': v.x,
                 'data-y': v.y,
+                'data-x1': v.x1,
+                'data-y1': v.y1,
                 'd_count':i
             });
 
@@ -356,6 +358,8 @@
                 $hover.attr({
                     'data-x': v.x,
                     'data-y': v.y,
+                    'data-x1': v.x1,
+                    'data-y1': v.y1,
                     'd_count':i
                 });
 
@@ -370,18 +374,18 @@
                     top: v.y*_this.element.height()
                 };
 
-                console.log(v.x+' '+ v.y+' '+ v.x1+' '+ v.y1);
-                console.log(width+' '+height);
-                console.log((v.x1*width-v.x*width)+' '+(v.y1*height-v.y*height));
+                //console.log(v.x+' '+ v.y+' '+ v.x1+' '+ v.y1);
+                //console.log(width+' '+height);
+                //console.log((v.x1*width-v.x*width)+' '+(v.y1*height-v.y*height));
 
                 _this.options.array.push({
                     size: {
-                        width: v.x1*width-v.x*width,
-                        height: v.y1*height-v.y*height
+                        width: v.x1*_this.element.width()-v.x*_this.element.width(),
+                        height: v.y1*_this.element.height()-v.y*_this.element.height()
                     },
                     position: {
-                        left: v.x*width,
-                        top: v.y*height
+                        left: v.x*_this.element.width(),
+                        top: v.y*_this.element.height()
                     }
                 });
                 var append = $('<div class="image_tag" data-no="' + dataI + '"></div>').draggable({
@@ -395,20 +399,29 @@
                             width: $(this).width(),
                             height: $(this).height()
                         }
-                        v.x= ui.position.left/width;
-                        v.y= ui.position.top/height;
-                        v.x1=  (ui.position.left+ $(this).width())/width;
-                        v.y1=  (ui.position.top+$(this).height())/height;
+                        v.x= ui.position.left/_this.element.width();
+                        v.y= ui.position.top/_this.element.height();
+                        v.x1=  (ui.position.left+ $(this).width())/_this.element.width();
+                        v.y1=  (ui.position.top+$(this).height())/_this.element.height();
                         console.log( ui.position.left+' '+ ui.position.top+' '+  (ui.position.left/_this.element.width())+' '+  (ui.position.top/_this.element.height()));
-                        $("span.taggd-item[d_count*='"+dataI+"']").attr('data-x',ui.position.left/_this.element.width()).attr('data-y',ui.position.top/_this.element.height()).next().attr('data-x',ui.position.left/_this.element.width()).attr('data-y',ui.position.top/_this.element.height());
+                        $("span.taggd-item[d_count*='"+dataI+"']")
+                            .attr('data-x',v.x)
+                            .attr('data-y',v.y)
+                            .attr('data-x1',v.x1)
+                            .attr('data-y1',v.y1)
+                            .next()
+                            .attr('data-x',v.x)
+                            .attr('data-y',v.y)
+                            .attr('data-x1',v.x1)
+                            .attr('data-y1',v.y1);
                         _this.options.array[$(this).attr("data-no")] = {
                             size: {
-                                width: v.x1*width-v.x*width,
-                                height: v.y1*height-v.y*height
+                                width: v.x1*_this.element.width()-v.x*_this.element.width(),
+                                height: v.y1*_this.element.height()-v.y*_this.element.height()
                             },
                             position: {
-                                left: v.x*width,
-                                top: v.y*height
+                                left: v.x*_this.element.width(),
+                                top: v.y*_this.element.height()
                             }
                         };
                         _this.element.triggerHandler('change');
@@ -425,20 +438,29 @@
                             left: $(this).position().left,
                             top: $(this).position().top
                         }
-                        v.x= $(this).position().left/width;
-                        v.y= $(this).position().top/height;
-                        v.x1=  ($(this).position().left+ $(this).width())/width;
-                        v.y1=  ($(this).position().top+$(this).height())/height;
+                        v.x= $(this).position().left/_this.element.width();
+                        v.y= $(this).position().top/_this.element.height();
+                        v.x1=  ($(this).position().left+ $(this).width())/_this.element.width();
+                        v.y1=  ($(this).position().top+$(this).height())/_this.element.height();
                         console.log( ui.position.left+' '+ ui.position.top+' '+  (ui.position.left/_this.element.width())+' '+  (ui.position.top/_this.element.height()));
-                        $("span.taggd-item[d_count*='"+dataI+"']").attr('data-x',ui.position.left/_this.element.width()).attr('data-y',ui.position.top/_this.element.height()).next().attr('data-x',ui.position.left/_this.element.width()).attr('data-y',ui.position.top/_this.element.height());
+                        $("span.taggd-item[d_count*='"+dataI+"']")
+                            .attr('data-x',v.x)
+                            .attr('data-y',v.y)
+                            .attr('data-x1',v.x1)
+                            .attr('data-y1',v.y1)
+                            .next()
+                            .attr('data-x',v.x)
+                            .attr('data-y',v.y)
+                            .attr('data-x1',v.x1)
+                            .attr('data-y1',v.y1);
                         _this.options.array[$(this).attr("data-no")] = {
                             size: {
-                                width: v.x1*width-v.x*width,
-                                height: v.y1*height-v.y*height
+                                width: v.x1*_this.element.width()-v.x*_this.element.width(),
+                                height: v.y1*_this.element.height()-v.y*_this.element.height()
                             },
                             position: {
-                                left: v.x*width,
-                                top: v.y*height
+                                left: v.x*_this.element.width(),
+                                top: v.y*_this.element.height()
                             }
                         };
                         setTimeout(function(){
@@ -527,6 +549,33 @@
                 });
             }
         });
+
+        this.wrapper.find('span.taggd-item').each(function(i, e) {
+            var $el=$(e);
+            var no = $el.attr('d_count');
+            var left = $el.attr('data-x') * _this.element.width();
+            var top = $el.attr('data-y') * _this.element.height();
+            var width = $el.attr('data-x1') * _this.element.width()-left;
+            var height = $el.attr('data-y1') * _this.element.height()-top;
+            //_this.options.array[$el.attr("data-no")] = {
+            //    size: {
+            //        width: width,
+            //        height: height
+            //    },
+            //    position: {
+            //        left: left,
+            //        top: top
+            //    }
+            //};
+            //$(".image_tag[data-no*='"+no+"']").css({
+            //    //"position": "absolute",
+            //    "top": top,
+            //    "left": left,
+            //    "width": width,
+            //    "height": height
+            //});
+        });
+
     };
 
 
