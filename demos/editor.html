@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>taggd editor demo</title>
+	
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="../css/taggd.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+	<style>
+		img,.taggd-wrapper {
+			display: inline-block;
+			width: 512px;
+		}
+		.image_tag{
+			min-width: 50px;
+			min-height: 50px;
+			border: 1px solid #fff;
+		}
+	</style>
+	
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="jquery-ui-1.9.2.custom.min.js"></script>
+	<!--<script src="../js/jquery.taggd.js"></script>-->
+	<script src="jquery.taggd.custom.js"></script>
+</head>
+<body>
+
+<!--<img src="https://timseverien.com/projects/taggd/img/demo-1.jpg" class="taggd" alt="" />-->
+<img src="77.jpg" class="taggd" alt="" />
+<!--<img src="77.jpg" class="taggd" alt="" />-->
+
+<script>
+	var data = [];
+	var options = [];
+
+//	options.push({
+//
+//		align: {
+//			y: 'top'
+//		},
+//		array:[],
+//
+//		offset: {
+//			top: 15
+//		},
+//
+//		handlers: {
+//			click: 'toggle'
+//		}
+//	});
+//
+//	data.push([
+//		{ x: 0.62, y: 0.7,x1: 0.62, y1: 0.7, text: 'Rope'             },
+//		{ x: 0.51, y: 0.5,x1: 0.51, y1: 0.5, text: 'Bird'             },
+//		{ x: 0.40, y: 0.3,x1: 0.40, y1: 0.3, text: 'Water, obviously' }
+//	]);
+
+
+	options.push({
+		align: {
+			y: 'top'
+		},
+		array:[],
+
+		offset: {
+			top: 15
+		},
+
+		handlers: {
+			mouseenter: 'show',
+			mouseleave: 'hide'
+		},
+
+		edit:true
+	});
+
+	data.push([
+		{ x: 0.62, y: 0.7, x1: 0.822, y1: 0.867, text: 'Eating place' },
+		{ x: 0.51, y: 0.5, x1: 0.634, y1: 0.898, text: 'Nose' },
+		{ x: 0.40, y: 0.2, x1: 0.57, y1: 0.56, text: 'Hat' }
+	]);
+
+
+//	options.push({  //empty image without data
+//		align: {
+//			x: 'center',
+//			y: 'center'
+//		},
+//		offset: {
+//			left: 0,
+//			top: 24
+//		},
+//		edit: true
+//	});
+//
+//	data.push([]);  //empty image without data
+
+	$(window).load(function() {
+		$('.taggd').each(function(i, e) {
+			var taggd = $(e).taggd(options[i], data[i]);
+			taggd.on('change', function() {
+				console.log(taggd.data);
+			});
+		});
+	});
+</script>
+
+</body>
+</html>
