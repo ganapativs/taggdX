@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd31983d-88b2-4e20-8753-1cd885716273" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/editor.html" afterPath="$PROJECT_DIR$/demos/editor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/jquery.taggd.custom.js" afterPath="$PROJECT_DIR$/demos/jquery.taggd.custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/taggd.css" afterPath="$PROJECT_DIR$/css/taggd.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.taggd.custom.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jquery.taggd.custom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/jquery.taggd.custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54175824" vertical-offset="2074" max-vertical-offset="10931">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="10931">
               <caret line="151" column="23" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -52,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taggd.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="taggd.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/taggd.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2150" max-vertical-offset="3162">
-              <caret line="178" column="22" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.86923075" vertical-offset="2252" max-vertical-offset="3162">
+              <caret line="179" column="41" selection-start-line="179" selection-start-column="41" selection-end-line="179" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -88,9 +86,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/demos/empty.js" />
-        <option value="$PROJECT_DIR$/css/taggd.css" />
         <option value="$PROJECT_DIR$/demos/editor.html" />
         <option value="$PROJECT_DIR$/demos/jquery.taggd.custom.js" />
+        <option value="$PROJECT_DIR$/css/taggd.css" />
       </list>
     </option>
   </component>
@@ -254,7 +252,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426331523804</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="TaggdX v0.1">
+      <created>1426337030950</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1426337030950</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -303,7 +307,8 @@
     <MESSAGE value="Initial responsive resize bug fix remaining" />
     <MESSAGE value="Initial responsive working" />
     <MESSAGE value="Initial responsive working with new css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial responsive working with new css" />
+    <MESSAGE value="TaggdX v0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="TaggdX v0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -404,22 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demos/editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="697" max-vertical-offset="1972">
-          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/taggd.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2150" max-vertical-offset="3162">
-          <caret line="178" column="22" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demos/empty.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1360">
@@ -432,12 +421,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/jquery.taggd.custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54175824" vertical-offset="2074" max-vertical-offset="10931">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="10931">
           <caret line="151" column="23" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <marker date="1426336978003" expanded="true" signature="10737:10756" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692" vertical-offset="697" max-vertical-offset="1972">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/taggd.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86923075" vertical-offset="2252" max-vertical-offset="3162">
+          <caret line="179" column="41" selection-start-line="179" selection-start-column="41" selection-end-line="179" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
