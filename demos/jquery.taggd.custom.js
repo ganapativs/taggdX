@@ -405,7 +405,10 @@
             }
 
             if($(".image_tag[data-no*='"+i+"']").length==0){
-                _this.element.removeAttr('style');
+                //_this.element.removeAttr('style');
+                var w1=v.x1*original_w-v.x*original_w;
+                var h1=v.y1*original_h-v.y*original_h;
+                console.log(w1+' '+h1);
                 var dataI = _this.options.array.length;
                 var offset = $(this).offset();
                 var position = {
@@ -460,7 +463,7 @@
                                 top: v.y*original_h
                             }
                         };
-                        _this.element.triggerHandler('change');
+                        //_this.element.triggerHandler('change');
                         _this.updateDOM();
                     }
                 }).resizable({
@@ -470,9 +473,22 @@
                     //    return false;
                     //},
                     stop: function (event, ui) {
+                        console.log(1);
+
+                        //_this.element.removeAttr('style');
+                        //
+                        //original_h = _this.element.height();
+                        //original_w = _this.element.width();
+                        //
+                        //_this.element.css({ height: 'auto', width: 'auto' });
+
+                        //var size = {
+                        //    width: ui.size.width,
+                        //    height: ui.size.height
+                        //}
                         var size = {
-                            width: ui.size.width,
-                            height: ui.size.height
+                            width:  ui.size.width/_this.element.width(),
+                            height:   ui.size.height/_this.element.height()
                         }
                         var position = {
                             left: $(this).position().left,
@@ -480,9 +496,11 @@
                         }
                         v.x= $(this).position().left/_this.element.width();
                         v.y= $(this).position().top/_this.element.height();
-                        v.x1=  ($(this).position().left+ $(this).width())/_this.element.width();
-                        v.y1=  ($(this).position().top+$(this).height())/_this.element.height();
-                        console.log('X: '+ v.x+' '+'Y: '+ v.y+' '+'WIDTH: '+ (v.x1-v.x)+' '+'HEIGHT: '+ (v.y1-v.x));
+                        v.x1= ui.size.width/_this.element.width()+v.x;
+                        v.y1= ui.size.height/_this.element.height()+v.y;
+                        w1=v.x1*original_w-v.x*original_w;
+                        h1=v.y1*original_h-v.y*original_h;
+                        console.log('X: '+ _this.element.width()+' '+'Y: '+ _this.element.height()+' '+'WIDTH: '+ original_w+' '+'HEIGHT: '+ original_h+' H2: '+ui.size.height+' W2: '+ui.size.width+' hei: '+_this.element.width());
                         $("span.taggd-item[d_count*='"+dataI+"']")
                             .attr('data-x',v.x)
                             .attr('data-y',v.y)
@@ -495,28 +513,28 @@
                             .attr('data-y1',v.y1);
                         _this.options.array[$(this).attr("data-no")] = {
                             size: {
-                                width: v.x1*original_w-v.x*original_w,
-                                height: v.y1*original_h-v.y*original_h
+                                width: w1,
+                                height: h1
                             },
                             position: {
                                 left: v.x*original_w,
                                 top: v.y*original_h
                             }
                         };
-                        setTimeout(function(){
-                            _this.element.triggerHandler('change');
-                            _this.updateDOM();
-                        },100);
+
+                        //_this.element.triggerHandler('change');
+                        _this.updateDOM();
+
                     }
                 }).css({
                     "position": "absolute",
                     "top": position.top,
                     "left": position.left,
-                    "width": v.x1*original_w-v.x*original_w,
-                    "height": v.y1*original_h-v.y*original_h
+                    "width": w1,
+                    "height": h1
                 });
                 _this.wrapper.append(append);
-                _this.element.css({ height: 'auto', width: 'auto' });
+                //_this.element.css({ height: 'auto', width: 'auto' });
             }
 
             if(typeof _this.options.handlers === 'object') {
@@ -595,33 +613,6 @@
         else{
             $('.image_tag').draggable({ disabled: true }).resizable('disable');
         }
-
-
-        //this.wrapper.find('span.taggd-item').each(function(i, e) {
-        //    var $el=$(e);
-        //    var no = $el.attr('d_count');
-        //    var left = $el.attr('data-x') * _this.element.width();
-        //    var top = $el.attr('data-y') * _this.element.height();
-        //    var width = $el.attr('data-x1') * _this.element.width()-left;
-        //    var height = $el.attr('data-y1') * _this.element.height()-top;
-        //    //_this.options.array[$el.attr("data-no")] = {
-        //    //    size: {
-        //    //        width: width,
-        //    //        height: height
-        //    //    },
-        //    //    position: {
-        //    //        left: left,
-        //    //        top: top
-        //    //    }
-        //    //};
-        //    //$(".image_tag[data-no*='"+no+"']").css({
-        //    //    //"position": "absolute",
-        //    //    "top": top,
-        //    //    "left": left,
-        //    //    "width": width,
-        //    //    "height": height
-        //    //});
-        //});
 
     };
 
