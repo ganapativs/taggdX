@@ -165,6 +165,13 @@
 
         _this.wrapper.append($editSwitch);
 
+        var $boxHideSwitch=$('<button />').addClass('taggdX-box-hide').html('Show/Hide Boxes');
+        $boxHideSwitch.on('click', function() {
+            $('.taggd-wrapper .image_tag').toggle();
+        });
+
+        _this.wrapper.append($boxHideSwitch);
+
     };
 
     Taggd.prototype.alterDOM = function() {
@@ -613,6 +620,12 @@
         else{
             $('.image_tag').draggable({ disabled: true }).resizable('disable');
         }
+
+
+        if(_this.options.hidebox&&!_this.options.enabled){
+            $('.taggd-wrapper .image_tag').hide();
+        }
+
 
     };
 
