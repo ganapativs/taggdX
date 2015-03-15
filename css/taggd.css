@@ -14,16 +14,16 @@
  * 0. You just DO WHAT THE FUCK YOU WANT TO.
 */
 
-@font-face {
-  font-family: 'taggd';
-  src: url('../fonts/taggd.eot');
-  src: url('../fonts/taggd.eot#iefix') format('embedded-opentype'),
-       url('../fonts/taggd.woff') format('woff'),
-       url('../fonts/taggd.ttf') format('truetype'),
-       url('../fonts/taggd.svg#taggd') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+/*@font-face {*/
+  /*font-family: 'taggd';*/
+  /*src: url('../fonts/taggd.eot');*/
+  /*src: url('../fonts/taggd.eot#iefix') format('embedded-opentype'),*/
+       /*url('../fonts/taggd.woff') format('woff'),*/
+       /*url('../fonts/taggd.ttf') format('truetype'),*/
+       /*url('../fonts/taggd.svg#taggd') format('svg');*/
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+/*}*/
 
 .taggd-wrapper {
 	overflow: hidden;
@@ -34,11 +34,18 @@
 }
 
 .taggd-wrapper .taggd-item {
-    background-color: #f26c4f;
+    background-color: #fff;
 	cursor: pointer;
 	display: block;
-	padding: 10px;
+	/*padding: 10px;*/
 	z-index: 1000;
+
+	font-size: 16px;
+	color: #f26c4f;
+	line-height: 27px;
+	width: 25px;
+	height: 25px;
+	text-align: center;
 
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -47,10 +54,15 @@
     -webkit-transition: background-color 0.2s;
     -moz-transition: background-color 0.2s;
     transition: background-color 0.2s;
+
+}
+.taggd-wrapper .taggd-item:hover{
+	color: #fff;
+	background-color: #f26c4f;
 }
 
 .taggd-wrapper .taggd-item.active,
-.taggd-wrapper .taggd-item:hover { background-color: #db3c5d; }
+.taggd-wrapper .taggd-item:hover { background-color: #db3c5d;color: #fff }
 
 .taggd-wrapper .taggd-item-hover {
     background-color: #452b72;
@@ -103,8 +115,8 @@
 	background-color: #fff;
 	border: 0;
 	color: #452b72;
-	font-family: 'taggd', sans-serif;
-	font-size: 0.666em;
+	/*font-family: 'taggd', sans-serif;*/
+	font-size: 14px;
 	height: 1.5em;
 	line-height: 1;
 	margin: 0 0 0 0.25em;
@@ -184,7 +196,7 @@ img,.taggd-wrapper {
 	background: transparent;
 	height: calc(100% - 4px);
 	width: calc(100% - 4px);
-	border: 1px solid #FFF;
+	border: 1px solid transparent;
 }
 
 .taggdX-edit{

@@ -183,9 +183,11 @@
                 $input = $('<input type="text" size="16" />')
                     .val($e.text()),
                 $button_ok = $('<button />')
-                    .html(_this.options.strings.save),
+                    //.html(_this.options.strings.save),
+                    .html('<i class="ion-checkmark-round"></i>'),
                 $button_delete = $('<button />')
-                    .html(_this.options.strings.delete);
+                    //.html(_this.options.strings.delete);
+                    .html('<i class="ion-close-round"></i>');
 
             $button_ok.on('click', function() {
                 _this.hide();
@@ -394,6 +396,7 @@
 
             $item.css('position', 'absolute');
             $item.addClass('taggd-item');
+            $item.html('<i class="ion-more"></i>');
 
             _this.wrapper.append($item);
 
