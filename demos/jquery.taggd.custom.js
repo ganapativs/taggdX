@@ -200,7 +200,7 @@
                 _this.options.array.pop();
 
                 var dataI=$e.attr('d_count');
-                $(".image_tag[data-no*='"+dataI+"']").remove();
+                _this.wrapper.find(".image_tag[data-no*='"+dataI+"']").remove();
                 console.log('len: '+_this.wrapper.find('.image_tag').length);
                 _this.wrapper.find('.image_tag').each(function (index) {
                     $(this).attr('data-no',index);
