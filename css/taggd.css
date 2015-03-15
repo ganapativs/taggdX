@@ -213,6 +213,12 @@ img,.taggd-wrapper {
 	padding: 4px 8px;
 }
 
+.taggdX-edit-on{
+	background: #452b72;
+	color: #fff;
+	border-color: #333;
+}
+
 .taggdX-box-hide{
 	position: absolute;
 	top: 40px;

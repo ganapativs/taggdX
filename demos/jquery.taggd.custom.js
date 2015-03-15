@@ -160,6 +160,7 @@
         var _this=this;
         var $editSwitch=$('<button />').addClass('taggdX-edit').html('Toggle Edit Mode');
         $editSwitch.on('click', function() {
+            $(this).toggleClass('taggdX-edit-on');
             _this.options.edit=!_this.options.edit;
             _this.options.enabled=!_this.options.enabled;
             _this.addDOM();
@@ -640,6 +641,7 @@
         });
         if(_this.options.enabled){
             _this.wrapper.find('.image_tag').draggable("enable").resizable("enable");
+            _this.wrapper.find('.taggdX-edit').addClass('taggdX-edit-on');
         }
         else{
             _this.wrapper.find('.image_tag').draggable({ disabled: true }).resizable('disable');
