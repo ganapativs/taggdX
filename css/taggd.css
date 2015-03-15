@@ -230,8 +230,13 @@ img,.taggd-wrapper {
 .taggd-wrapper .ui-state-disabled{
 	opacity: 1 !important;
 	border-width: 3px;
-	border-color: rgba(58, 132, 215, 0.8);
+	border-color: rgba(255, 255, 255, 0.5);
 }
+
+.taggd-wrapper .ui-state-disabled .ui-resizable-handle{
+	background-image: none;
+}
+
 .taggd-wrapper .ui-state-disabled:hover:after{
 	position: absolute;
 	content: "";

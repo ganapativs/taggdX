@@ -165,13 +165,12 @@
 
         _this.wrapper.append($editSwitch);
 
-        var $boxHideSwitch=$('<button />').addClass('taggdX-box-hide').html('Show/Hide Boxes');
-        $boxHideSwitch.on('click', function() {
-            _this.dispose();
-            _this.wrapper.find('.image_tag').toggle();
-        });
-
-        _this.wrapper.append($boxHideSwitch);
+        //var $boxHideSwitch=$('<button />').addClass('taggdX-box-hide').html('Show/Hide Boxes');
+        //$boxHideSwitch.on('click', function() {
+        //    _this.wrapper.find('.image_tag').toggle();
+        //});
+        //
+        //_this.wrapper.append($boxHideSwitch);
 
     };
 
@@ -642,9 +641,9 @@
         }
 
 
-        if(_this.options.hidebox&&!_this.options.enabled){
-            _this.wrapper.find('.image_tag').hide();
-        }
+        //if(_this.options.hidebox&&!_this.options.enabled){
+        //    _this.wrapper.find('.image_tag').hide();
+        //}
 
 
     };
