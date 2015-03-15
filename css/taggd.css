@@ -61,8 +61,8 @@
 	background-color: #f26c4f;
 }
 
-.taggd-wrapper .taggd-item.active,
-.taggd-wrapper .taggd-item:hover { background-color: #db3c5d;color: #fff }
+.taggd-wrapper .taggd-item.active
+ { background-color: #db3c5d;color: #fff }
 
 .taggd-wrapper .taggd-item-hover {
     background-color: #452b72;
