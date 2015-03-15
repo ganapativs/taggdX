@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd31983d-88b2-4e20-8753-1cd885716273" name="Default" comment="Fixed image dragging">
+    <list default="true" id="dd31983d-88b2-4e20-8753-1cd885716273" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/editor.html" afterPath="$PROJECT_DIR$/demos/editor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/jquery.taggd.custom.js" afterPath="$PROJECT_DIR$/demos/jquery.taggd.custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Image tagging library.iws" />
@@ -28,20 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="editor.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="editor.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.538462" vertical-offset="629" max-vertical-offset="1870">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.8461539" vertical-offset="0" max-vertical-offset="1853">
+              <caret line="96" column="103" selection-start-line="96" selection-start-column="103" selection-end-line="96" selection-end-column="103" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.taggd.custom.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jquery.taggd.custom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/jquery.taggd.custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18952063" vertical-offset="1598" max-vertical-offset="11373">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="11373">
               <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -351,7 +350,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426417514833</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Removed array from user options, made as default">
+      <created>1426418032586</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1426418032586</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -409,7 +414,8 @@
     <MESSAGE value="Taggd on multiple images, added imagesize(), getData() api's." />
     <MESSAGE value="CSS fixes" />
     <MESSAGE value="Fixed image dragging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed image dragging" />
+    <MESSAGE value="Removed array from user options, made as default" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed array from user options, made as default" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -602,22 +608,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demos/editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.538462" vertical-offset="629" max-vertical-offset="1870">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demos/jquery.taggd.custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18952063" vertical-offset="1598" max-vertical-offset="11373">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="11373">
           <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <marker date="1426417592817" expanded="true" signature="11964:11983" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8461539" vertical-offset="0" max-vertical-offset="1853">
+          <caret line="96" column="103" selection-start-line="96" selection-start-column="103" selection-end-line="96" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>
