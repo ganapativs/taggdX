@@ -25,32 +25,7 @@
 <script>
 	var data = [];
 	var options = [];
-
-//	options.push({
-//
-//		align: {
-//			y: 'top'
-//		},
-//		array:[],
-//
-//		offset: {
-//			top: 15
-//		},
-//
-//		handlers: {
-//			click: 'toggle'
-//		},
-//
-//		enabled:true,
-//		hidebox:false
-//	});
-//
-//	data.push([
-//		{ x: 0.62, y: 0.7,x1: 0.62, y1: 0.7, text: 'Rope'             },
-//		{ x: 0.51, y: 0.5,x1: 0.51, y1: 0.5, text: 'Bird'             },
-//		{ x: 0.40, y: 0.3,x1: 0.40, y1: 0.3, text: 'Water, obviously' }
-//	]);
-
+	var taggd=[];
 
 	options.push({
 		align: {
@@ -101,26 +76,17 @@
 		{ x: 0.40, y: 0.2, x1: 0.57, y1: 0.56, text: 'Hat' }
 	]);
 
-
-//	options.push({  //empty image without data
-//		align: {
-//			x: 'center',
-//			y: 'center'
-//		},
-//		offset: {
-//			left: 0,
-//			top: 24
-//		},
-//		edit: true
-//	});
-//
-//	data.push([]);  //empty image without data
+//	taggd[i].imagesize() //gives current image size in x and y
+//	taggd[i].getData() //gives all the data with x,y,x1,y1 and text
+//	taggd[i].dispose() //Removes everything and resets image
+//	More reference on https://github.com/timseverien/taggd
 
 	$(window).load(function() {
 		$('.taggd').each(function(i, e) {
-			var taggd = $(e).taggd(options[i], data[i]);
-			taggd.on('change', function() {
-				console.log(taggd.data);
+			taggd[i] = $(e).taggd(options[i], data[i]);
+			taggd[i].on('change', function() {
+				console.log('Data'+taggd[i].data);
+				console.log('Image Size'+taggd[i].imagesize().x+''+taggd[i].imagesize().y);
 			});
 		});
 	});

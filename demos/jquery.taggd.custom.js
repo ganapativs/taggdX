@@ -167,6 +167,7 @@
 
         var $boxHideSwitch=$('<button />').addClass('taggdX-box-hide').html('Show/Hide Boxes');
         $boxHideSwitch.on('click', function() {
+            _this.dispose();
             _this.wrapper.find('.image_tag').toggle();
         });
 
@@ -260,6 +261,10 @@
         }
     };
 
+    Taggd.prototype.getData = function() {
+        return this.data;
+    };
+
     Taggd.prototype.clear = function() {
         if(!this.initialized) return;
         this.wrapper.find('.taggd-item, .taggd-item-hover').remove();
@@ -349,7 +354,19 @@
 
     Taggd.prototype.dispose = function() {
         this.clear();
+        this.wrapper.find('button').remove();
         this.element.unwrap(this.wrapper);
+    };
+
+    /****************************************************************
+     * RETURN IMAGE WIDTH AND HEIGHT
+     ****************************************************************/
+
+    Taggd.prototype.imagesize = function() {
+        var size={};
+        size.x=this.element.width();
+        size.y=this.element.height();
+        return size;
     };
 
 
