@@ -101,6 +101,9 @@
         var _this = this;
 
         this.initialized = true;
+
+        this.options.array=[];
+
         if(_this.options.enabled)
             _this.options.edit=true; // Keep edit mode on always
 
