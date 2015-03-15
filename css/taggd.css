@@ -147,11 +147,11 @@ img,.taggd-wrapper {
 	border: 3px solid #fff;
 	border-radius: 4px;
 	cursor: all-scroll;
-	-webkit-transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
-	-moz-transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
-	-o-transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
-	-ms-transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
-	transition: all 0.2s cubic-bezier(0.65, 0.045, 0.405, 1);
+	-webkit-transition: all 0.4s cubic-bezier(0.65, 0.045, 0.405, 1);
+	-moz-transition: all 0.4s cubic-bezier(0.65, 0.045, 0.405, 1);
+	-o-transition: all 0.4s cubic-bezier(0.65, 0.045, 0.405, 1);
+	-ms-transition: all 0.4s cubic-bezier(0.65, 0.045, 0.405, 1);
+	transition: all 0.4s cubic-bezier(0.65, 0.045, 0.405, 1);
 }
 .image_tag:before {
 	position: absolute;

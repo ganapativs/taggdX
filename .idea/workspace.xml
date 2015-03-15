@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd31983d-88b2-4e20-8753-1cd885716273" name="Default" comment="TaggdX V1">
+    <list default="true" id="dd31983d-88b2-4e20-8753-1cd885716273" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/editor.html" afterPath="$PROJECT_DIR$/demos/editor.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/jquery.taggd.custom.js" afterPath="$PROJECT_DIR$/demos/jquery.taggd.custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/taggd.css" afterPath="$PROJECT_DIR$/css/taggd.css" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="editor.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1921">
-              <caret line="9" column="94" selection-start-line="9" selection-start-column="94" selection-end-line="9" selection-end-column="94" />
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="255" max-vertical-offset="1207">
+              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -42,11 +42,11 @@
       <file leaf-file-name="jquery.taggd.custom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/jquery.taggd.custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8862876" vertical-offset="10119" max-vertical-offset="11016">
-              <caret line="642" column="11" selection-start-line="642" selection-start-column="11" selection-end-line="642" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.35451505" vertical-offset="3133" max-vertical-offset="11016">
+              <caret line="203" column="77" selection-start-line="203" selection-start-column="77" selection-end-line="203" selection-end-column="77" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1426402564839" expanded="true" signature="11267:11286" placeholder="..." />
+                <marker date="1426404109244" expanded="true" signature="11303:11322" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <file leaf-file-name="taggd.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/taggd.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2881" max-vertical-offset="4250">
-              <caret line="193" column="14" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2371" max-vertical-offset="4250">
+              <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -88,9 +88,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/demos/empty.js" />
+        <option value="$PROJECT_DIR$/css/taggd.css" />
         <option value="$PROJECT_DIR$/demos/editor.html" />
         <option value="$PROJECT_DIR$/demos/jquery.taggd.custom.js" />
-        <option value="$PROJECT_DIR$/css/taggd.css" />
       </list>
     </option>
   </component>
@@ -284,7 +284,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426400330722</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="TaggdX V1 icons updated">
+      <created>1426403204482</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1426403204482</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -337,7 +343,8 @@
     <MESSAGE value="Edit toggle bug" />
     <MESSAGE value="TaggdX V.02" />
     <MESSAGE value="TaggdX V1" />
-    <option name="LAST_COMMIT_MESSAGE" value="TaggdX V1" />
+    <MESSAGE value="TaggdX V1 icons updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="TaggdX V1 icons updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -358,7 +365,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1426402564839" expanded="true" signature="11267:11286" placeholder="..." />
+            <marker date="1426404109244" expanded="true" signature="11303:11322" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -387,7 +394,7 @@
           <caret line="383" column="39" selection-start-line="383" selection-start-column="39" selection-end-line="383" selection-end-column="39" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1426402564839" expanded="true" signature="11267:11286" placeholder="..." />
+            <marker date="1426404109244" expanded="true" signature="11303:11322" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -416,7 +423,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1426402564839" expanded="true" signature="11267:11286" placeholder="..." />
+            <marker date="1426404109244" expanded="true" signature="11303:11322" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -438,6 +445,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/taggd.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2371" max-vertical-offset="4250">
+          <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demos/empty.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1360">
@@ -450,27 +465,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/editor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1921">
-          <caret line="9" column="94" selection-start-line="9" selection-start-column="94" selection-end-line="9" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/taggd.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2881" max-vertical-offset="4250">
-          <caret line="193" column="14" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="255" max-vertical-offset="1207">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/jquery.taggd.custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8862876" vertical-offset="10119" max-vertical-offset="11016">
-          <caret line="642" column="11" selection-start-line="642" selection-start-column="11" selection-end-line="642" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.35451505" vertical-offset="3133" max-vertical-offset="11016">
+          <caret line="203" column="77" selection-start-line="203" selection-start-column="77" selection-end-line="203" selection-end-column="77" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1426402564839" expanded="true" signature="11267:11286" placeholder="..." />
+            <marker date="1426404109244" expanded="true" signature="11303:11322" placeholder="..." />
           </folding>
         </state>
       </provider>

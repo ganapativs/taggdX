@@ -17,39 +17,13 @@
 	<script src="jquery.taggd.custom.js"></script>
 </head>
 <body>
-
-<img src="https://timseverien.com/projects/taggd/img/demo-1.jpg" class="taggd" alt="" />
-<!--<img src="77.jpg" class="taggd" alt="" />-->
-<!--<img src="77.jpg" class="taggd" alt="" />-->
-
+<div>
+<img src="https://timseverien.com/projects/taggd/img/demo-1.jpg" id="taggd" alt="" />
+</div>
 <script>
-	var data = [];
-	var options = [];
-
-//	options.push({
-//
-//		align: {
-//			y: 'top'
-//		},
-//		array:[],
-//
-//		offset: {
-//			top: 15
-//		},
-//
-//		handlers: {
-//			click: 'toggle'
-//		}
-//	});
-//
-//	data.push([
-//		{ x: 0.62, y: 0.7,x1: 0.62, y1: 0.7, text: 'Rope'             },
-//		{ x: 0.51, y: 0.5,x1: 0.51, y1: 0.5, text: 'Bird'             },
-//		{ x: 0.40, y: 0.3,x1: 0.40, y1: 0.3, text: 'Water, obviously' }
-//	]);
 
 
-	options.push({
+	var options = {
 		align: {
 			y: 'top'
 		},
@@ -65,35 +39,19 @@
 
 		enabled:true,
 		hidebox:false
-	});
+	};
 
-	data.push([
+	var data =[
 		{ x: 0.62, y: 0.7, x1: 0.822, y1: 0.867, text: 'Eating place' },
 		{ x: 0.51, y: 0.5, x1: 0.634, y1: 0.898, text: 'Nose' },
 		{ x: 0.40, y: 0.2, x1: 0.57, y1: 0.56, text: 'Hat' }
-	]);
+	];
 
-
-//	options.push({  //empty image without data
-//		align: {
-//			x: 'center',
-//			y: 'center'
-//		},
-//		offset: {
-//			left: 0,
-//			top: 24
-//		},
-//		edit: true
-//	});
-//
-//	data.push([]);  //empty image without data
 
 	$(window).load(function() {
-		$('.taggd').each(function(i, e) {
-			var taggd = $(e).taggd(options[i], data[i]);
-			taggd.on('change', function() {
-				console.log(taggd.data);
-			});
+		var taggd = $('#taggd').taggd(options, data);
+		taggd.on('change', function() {
+			console.log(taggd.data);
 		});
 	});
 

@@ -167,7 +167,7 @@
 
         var $boxHideSwitch=$('<button />').addClass('taggdX-box-hide').html('Show/Hide Boxes');
         $boxHideSwitch.on('click', function() {
-            $('.taggd-wrapper .image_tag').toggle();
+            _this.wrapper.find('.image_tag').toggle();
         });
 
         _this.wrapper.append($boxHideSwitch);
@@ -201,8 +201,8 @@
 
                 var dataI=$e.attr('d_count');
                 $(".image_tag[data-no*='"+dataI+"']").remove();
-                console.log('len: '+$('.image_tag').length);
-                $('.image_tag').each(function (index) {
+                console.log('len: '+_this.wrapper.find('.image_tag').length);
+                _this.wrapper.find('.image_tag').each(function (index) {
                     $(this).attr('data-no',index);
                 });
 
@@ -414,7 +414,7 @@
                 _this.wrapper.append($hover);
             }
 
-            if($(".image_tag[data-no*='"+i+"']").length==0){
+            if(_this.wrapper.find(".image_tag[data-no*='"+i+"']").length==0){
                 //_this.element.removeAttr('style');
                 var w1=v.x1*original_w-v.x*original_w;
                 var h1=v.y1*original_h-v.y*original_h;
@@ -618,15 +618,15 @@
             }
         });
         if(_this.options.enabled){
-            $('.image_tag').draggable("enable").resizable("enable");
+            _this.wrapper.find('.image_tag').draggable("enable").resizable("enable");
         }
         else{
-            $('.image_tag').draggable({ disabled: true }).resizable('disable');
+            _this.wrapper.find('.image_tag').draggable({ disabled: true }).resizable('disable');
         }
 
 
         if(_this.options.hidebox&&!_this.options.enabled){
-            $('.taggd-wrapper .image_tag').hide();
+            _this.wrapper.find('.image_tag').hide();
         }
 
 
