@@ -165,6 +165,8 @@
 
         _this.wrapper.append($editSwitch);
 
+        _this.wrapper.find('img').on('dragstart', function(event) { event.preventDefault(); }); //Prevent image drag;
+
         //var $boxHideSwitch=$('<button />').addClass('taggdX-box-hide').html('Show/Hide Boxes');
         //$boxHideSwitch.on('click', function() {
         //    _this.wrapper.find('.image_tag').toggle();
